@@ -7,11 +7,10 @@ export interface Options {
 	showTitle: boolean;
 	title: string;
 	useBom: boolean;
-    	headers: string[];
+	headers: string[];
 }
 
 export class CsvConfigConsts {
-	
 	public static EOL = "\r\n";
 	public static BOM = "\ufeff";
 
@@ -23,8 +22,7 @@ export class CsvConfigConsts {
 	public static DEFAULT_FILENAME = 'mycsv.csv';
 	public static DEFAULT_SHOW_LABELS = false;
 	public static DEFAULT_USE_BOM = true;
-    	public static DEFAULT_HEADER = [];
-
+	public static DEFAULT_HEADER:string[] = [];
 }
 
 export const ConfigDefaults: Options = {
@@ -35,10 +33,11 @@ export const ConfigDefaults: Options = {
 	showLabels: 				CsvConfigConsts.DEFAULT_SHOW_LABELS,
 	showTitle:					CsvConfigConsts.DEFAULT_SHOW_TITLE,
 	title: 							CsvConfigConsts.DEFAULT_TITLE,
-	useBom:					CsvConfigConsts.DEFAULT_USE_BOM,
-    	headers: CsvConfigConsts.DEFAULT_HEADER
+	useBom:							CsvConfigConsts.DEFAULT_USE_BOM,
+  headers: 						CsvConfigConsts.DEFAULT_HEADER
 };
-export class Angular2Csv {
+
+export class Csv {
 
 	public fileName: string;
 	public labels: Array<String>;
@@ -51,7 +50,7 @@ export class Angular2Csv {
 		let config = options || {};
 
 		this.data = typeof DataJSON != 'object' ? JSON.parse(DataJSON) : DataJSON;
-		
+
 		this._options = objectAssign({}, ConfigDefaults, config);
 
 		if (this._options.filename) {
@@ -81,7 +80,7 @@ export class Angular2Csv {
 		}
 
 		let blob = new Blob([this.csv], {"type": "text/csv;charset=utf8;"});
-	
+
 		if(navigator.msSaveBlob){
 			let filename = this._options.filename.replace(/ /g,"_") + ".csv";
 			navigator.msSaveBlob(blob, filename);
@@ -185,16 +184,16 @@ function objectAssign(target: any, ...source: any[]) {
   let from: any;
   let to = toObject(target);
   let symbols: any;
-  
+
   for (var s = 1; s < arguments.length; s++) {
     from = Object(arguments[s]);
-    
+
     for (var key in from) {
       if (hasOwnProperty.call(from, key)) {
         to[key] = from[key];
       }
     }
-    
+
     if ((<any>Object).getOwnPropertySymbols) {
       symbols = (<any>Object).getOwnPropertySymbols(from);
       for (var i = 0; i < symbols.length; i++) {

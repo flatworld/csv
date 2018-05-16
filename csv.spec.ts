@@ -1,26 +1,23 @@
-/* tslint:disable:no-unused-variable */
+import { Csv } from './csv';
 
-import { TestBed, async } from '@angular/core/testing';
-import { Angular2Csv } from './Angular2-csv';
-
-describe('Component: Angular2Csv', () => {
+describe('Component: Csv', () => {
   it('should create an file with name My_Report.csv', () => {
   	let data = [
-  		{ 
+  		{
   			name: "Test 1",
   			age: 13,
   			average: 8.2,
   			approved: true,
   			description: "using 'Content here, content here' "
   		},
-  		{ 
+  		{
   			name: 'Test 2',
   			age: 11,
   			average: 8.2,
   			approved: true,
   			description: "using 'Content here, content here' "
   		},
-  		{ 
+  		{
   			name: 'Test 4',
   			age: 10,
   			average: 8.2,
@@ -29,7 +26,7 @@ describe('Component: Angular2Csv', () => {
   		},
   	];
 
-  	let component = new Angular2Csv(data, 'My Report');
-  	expect(component).toBeTruthy();
+  	let testee = new Csv(data, 'My Report');
+  	expect(testee).toBeTruthy();
   });
 });

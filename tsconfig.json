@@ -16,8 +16,8 @@
     "moduleResolution": "node"
   },
   "files": [
-    "Csv.ts",
-    "Csv.spec.ts"
+    "csv.ts",
+    "csv.spec.ts"
   ],
   "exclude": [
     "node_modules"

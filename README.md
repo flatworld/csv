@@ -6,13 +6,13 @@
 ## Installation
 
 ```javascript
-npm install --save angular2-csv
+npm install --save @asteasolutions/csv
 ```
 
 ## Example
 ```javascript
 
-import { Csv } from 'angular2-csv/Csv';
+import { Csv } from '@asteasolutions/csv';
 
 var data = [
   {

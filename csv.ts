@@ -105,7 +105,7 @@ export class Csv {
 		if (this._options.headers.length > 0) {
             let row = "";
             for (var column of this._options.headers) {
-                row += column + this._options.fieldSeparator;
+                row += this.formartData(column) + this._options.fieldSeparator;
             }
 
             row = row.slice(0, -1);

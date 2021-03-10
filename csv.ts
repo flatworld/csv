@@ -105,7 +105,7 @@ export class Csv {
 		if (this._options.headers.length > 0) {
             let row = "";
             for (var column of this._options.headers) {
-                row += this.formartData(column) + this._options.fieldSeparator;
+                row += this.formatData(column) + this._options.fieldSeparator;
             }
 
             row = row.slice(0, -1);
@@ -119,7 +119,7 @@ export class Csv {
   	for (var i = 0; i < this.data.length; i++) {
   		let row = "";
   		for (var index in this.data[i]) {
-  			row += this.formartData(this.data[i][index]) + this._options.fieldSeparator;;
+  			row += this.formatData(this.data[i][index]) + this._options.fieldSeparator;;
   		}
 
 			row = row.slice(0, -1);
@@ -130,7 +130,7 @@ export class Csv {
    * Format Data
    * @param {any} data
    */
-  formartData(data: any) {
+  formatData(data: any) {
 
   	if (this._options.decimalSeparator === 'locale' && this.isFloat(data)) {
   		return data.toLocaleString();

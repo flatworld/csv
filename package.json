@@ -1,10 +1,10 @@
 {
-  "name": "@asteasolutions/csv",
+  "name": "@flatworld/csv",
   "version": "0.1.4",
   "description": "Helper library for create CSV file export",
   "repository": {
     "type": "git",
-    "url": "https://github.com/asteasolutions/csv.git"
+    "url": "https://github.com/flatworld/csv.git"
   },
   "scripts": {
     "dev": "tsc --watch",
@@ -21,12 +21,12 @@
     "libreoffice",
     "openoffice"
   ],
-  "author": "javiertelioz",
-  "email": "jtelio118@gmail.com",
+  "author": "FlatWorld Technology",
+  "email": "technology@flatworld.com",
   "license": "MIT",
   "main": "csv.js",
   "typings": "./csv.d.ts",
-  "homepage": "https://github.com/asteasolutions/csv#readme",
+  "homepage": "https://github.com/flatworld/csv#readme",
   "devDependencies": {
     "@types/jasmine": "^2.5.46",
     "@types/js-base64": "^2.1.3",

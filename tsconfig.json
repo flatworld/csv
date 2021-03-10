@@ -1,20 +1,20 @@
 {
   "compilerOptions": {
     "noImplicitAny": true,
-    "module": "commonjs",
+    "module": "CommonJS",
     "target": "ES5",
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "sourceMap": true,
     "declaration": true,
     "lib": [
-      "dom",
-      "es2015.collection",
-      "es2015.promise",
-      "es5"
-    ],
-    "moduleResolution": "node"
+      "DOM",
+      "ES2015.Collection",
+      "ES2015.Promise",
+      "ES5"
+    ]
   },
+  "moduleResolution": "node",
   "files": [
     "csv.ts",
     "csv.spec.ts"

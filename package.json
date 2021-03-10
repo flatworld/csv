@@ -1,7 +1,7 @@
 {
   "name": "@flatworld/csv",
   "version": "0.1.4",
-  "description": "Helper library for create CSV file export",
+  "description": "Helper library to create a CSV file export",
   "repository": {
     "type": "git",
     "url": "https://github.com/flatworld/csv.git"

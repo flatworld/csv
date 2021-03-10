@@ -6,13 +6,13 @@
 ## Installation
 
 ```javascript
-npm install --save @asteasolutions/csv
+npm install --save @flatworld/csv
 ```
 
 ## Example
 ```javascript
 
-import { Csv } from '@asteasolutions/csv';
+import { Csv } from '@flatworld/csv';
 
 var data = [
   {

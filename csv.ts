@@ -2,7 +2,7 @@ export interface Options {
 	filename: string;
 	fieldSeparator: string;
 	quoteStrings: string;
-	decimalseparator:string;
+	decimalSeparator: string;
 	showLabels: boolean;
 	showTitle: boolean;
 	title: string;
@@ -29,7 +29,7 @@ export const ConfigDefaults: Options = {
 	filename: 					CsvConfigConsts.DEFAULT_FILENAME,
 	fieldSeparator:			CsvConfigConsts.DEFAULT_FIELD_SEPARATOR,
 	quoteStrings:				CsvConfigConsts.DEFAULT_QUOTE,
-	decimalseparator:		CsvConfigConsts.DEFAULT_DECIMAL_SEPARATOR,
+	decimalSeparator:		CsvConfigConsts.DEFAULT_DECIMAL_SEPARATOR,
 	showLabels: 				CsvConfigConsts.DEFAULT_SHOW_LABELS,
 	showTitle:					CsvConfigConsts.DEFAULT_SHOW_TITLE,
 	title: 							CsvConfigConsts.DEFAULT_TITLE,
@@ -132,12 +132,12 @@ export class Csv {
    */
   formartData(data: any) {
 
-  	if (this._options.decimalseparator === 'locale' && this.isFloat(data)) {
+  	if (this._options.decimalSeparator === 'locale' && this.isFloat(data)) {
   		return data.toLocaleString();
   	}
 
-  	if (this._options.decimalseparator !== '.' && this.isFloat(data)) {
-  		return data.toString().replace('.', this._options.decimalseparator);
+  	if (this._options.decimalSeparator !== '.' && this.isFloat(data)) {
+  		return data.toString().replace('.', this._options.decimalSeparator);
   	}
 
   	if (typeof data === 'string') {
